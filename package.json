@@ -1,0 +1,22 @@
+{
+  "name": "courseviz-backend",
+  "version": "1.0.0",
+  "description": "Backend of SUTD Course Visualization",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "author": "SUTD Course Visualization Project",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@types/node": "^16.11.6",
+    "dotenv": "^10.0.0",
+    "fastify": "^3.23.0",
+    "sequelize": "^6.9.0",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14",
+    "sequelize-auto": "^0.8.5"
+  }
+}
