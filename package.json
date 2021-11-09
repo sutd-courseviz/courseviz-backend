@@ -12,6 +12,7 @@
     "@types/node": "^16.11.6",
     "dotenv": "^10.0.0",
     "fastify": "^3.23.0",
+    "fastify-swagger": "^4.12.6",
     "sequelize": "^6.9.0",
     "sqlite3": "^5.0.2"
   },
