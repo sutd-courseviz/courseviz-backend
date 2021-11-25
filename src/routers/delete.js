@@ -16,7 +16,7 @@ const deletePlugin = (fastify, opts, done) => {
             reply.send(err);
         }
         
-        reply.send("Deleted element from " + req.params.first_id + " with the ID " + req.params.second_id).status(200);
+        reply.status(200).send("Deleted element from " + req.params.first_id + " with the ID " + req.params.second_id);
     });
     
 

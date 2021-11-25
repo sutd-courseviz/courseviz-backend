@@ -12,7 +12,7 @@ const postPlugin = (fastify, opts, done) => {
         try {
             content = req.query;
             await store.postPillar(content);
-            reply.send("Added " + content.name + " to the pillars database");
+            reply.code(201).send(content);
         }
         catch (err) {
             console.log(err);
@@ -23,7 +23,7 @@ const postPlugin = (fastify, opts, done) => {
         try {
             content = req.query;
             await store.postCourse(content);
-            reply.send("Added " + content.name + " to the courses database");
+            reply.code(201).send(content);
         }
         catch (err) {
             console.log(err);
@@ -34,7 +34,7 @@ const postPlugin = (fastify, opts, done) => {
         try {
             content = req.query;
             await store.postOutcome(content);
-            reply.send("Added " + content.name + " to the outcome database");
+            reply.code(201).send(content);
         }
         catch (err) {
             console.log(err);

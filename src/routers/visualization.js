@@ -8,10 +8,17 @@ const errHandler = (err) => {console.log(err);}
  */
 const visualizationPlugin = (fastify, opts, done) => {
     fastify.get("/", async (req, reply) => {
-        const data = await store.getAll().catch(errHandler);
-        reply.send(data);
+        try {
+            const data = await store.getAll().catch(errHandler);
+            reply.send(data);
+        }
+        catch(err){
+            reply.send(err)
+        }
+
     });
     done();
 }
 
 module.exports = visualizationPlugin;
+
