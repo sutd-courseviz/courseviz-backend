@@ -29,7 +29,8 @@ if (!sequelize) {
 const Course = sequelize.define('course', {
   id: {
     type: "",
-    allowNull: true,
+    autoIncrement: true,
+    allowNull: false,
     primaryKey: true
   },
   label: {
@@ -57,7 +58,8 @@ const Course = sequelize.define('course', {
 const MeasurableOutcome = sequelize.define('measurable_outcome', {
   id: {
     type: "",
-    allowNull: true,
+    autoIncrement: true,
+    allowNull: false,
     primaryKey: true
   },
   pillar_id: {
@@ -85,7 +87,8 @@ const MeasurableOutcome = sequelize.define('measurable_outcome', {
 const Pillar = sequelize.define('pillar', {
   id: {
     type: "",
-    allowNull: true,
+    autoIncrement: true,
+    allowNull: false,
     primaryKey: true
   },
   pillar_name: {
@@ -109,7 +112,8 @@ const Pillar = sequelize.define('pillar', {
 const Prereq = sequelize.define('prereq', {
   id: {
     type: "",
-    allowNull: true,
+    autoIncrement: true,
+    allowNull: false,
     primaryKey: true
   },
   src_id: {
